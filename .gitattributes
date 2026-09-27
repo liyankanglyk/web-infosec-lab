@@ -1,0 +1,19 @@
+# 统一换行策略：仓库内一律 LF，检出也为 LF
+* text=auto eol=lf
+
+# Windows 批处理脚本必须保持 cp936 + CRLF 原样，禁止任何换行转换
+# （cmd.exe 按 OEM 代码页解析，CR 被改动会导致中文行被误吞，见 AGENTS.md）
+*.bat  -text
+
+# 明确声明，避免被上面的 -text 之外的规则误处理
+*.php  text eol=lf
+*.css  text eol=lf
+*.sql  text eol=lf
+*.md   text eol=lf
+.htaccess      text eol=lf
+nginx.htaccess text eol=lf
+
+# 二进制（不生成 diff、不做转换）
+*.docx binary
+*.png  binary
+*.jpg  binary

@@ -1,0 +1,29 @@
+# 真实数据库配置（含本机口令）；仓库只发布 config_database.example.php
+config_database.php
+
+# 应用日志（index.php 会自建目录）
+/logs/*
+!/logs/.gitkeep
+
+# 数据库备份导出（明文 SQL，含用户口令等种子数据）
+/backups/*
+!/backups/.gitkeep
+
+# PHP 会话与缓存
+/session_data/
+sess_*
+*.cache
+
+# ------------------------------------------------------------------
+# 编辑器 / 操作系统 / 工具
+# ------------------------------------------------------------------
+.idea/
+.vscode/
+*.iml
+.settings/
+.project
+.classpath
+.history/
+.DS_Store
+Thumbs.db
+desktop.ini
