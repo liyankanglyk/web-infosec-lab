@@ -28,12 +28,6 @@ class LoginController
                     <h1>登录实验环境</h1>
                     <p class="lede">请使用实验下发的账号进入业务系统。</p>
 
-                    <div class="cred-box">
-                        <div class="cb-title">测试凭证</div>
-                        <div class="kv"><span class="k">用户名</span><span class="v mono">&nbsp;</span></div>
-                        <div class="kv"><span class="k">密码</span><span class="v mono">&nbsp;</span></div>
-                    </div>
-
                     <?php if (isset($_GET['error'])): ?>
                         <?php flashMessage('error', $_GET['error']); ?>
                     <?php endif; ?>
